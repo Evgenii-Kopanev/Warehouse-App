@@ -1,12 +1,13 @@
 {
   "name": "warehouse",
-  "private": true,
-  "homepage": "https://github.com/Evgenii-Kopanev/SV-projects/tree/3e115891c81b1ca4a9ec4d4ba386d57fb98b11e2/warehouse",
+  "private": false,
+  "homepage": "https://Evgenii-Kopanev.github.io/Warehouse-App",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "deploy": "npm run build && gh-pages -d build",
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
